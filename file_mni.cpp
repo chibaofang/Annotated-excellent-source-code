@@ -22,16 +22,16 @@ int main(){
 	string str;
 //	while(getline(infile,str)){
 //		cout<<str<<"\n";
-//	
-	string str;
+	string new_str;	
 	while(getline(cin,str)){
-		//int i;
-		for(int i=0;i<sizeof(str);i++){
-			new_str[i] = str[sizeof(str)-1];
-		}
-	//	cout<<"the sequence you input is:"<<str<<endl;
-		cout<<"the sequence reversed is:"<<new_str<<endl;
-
+		cout<<"the sequence you input is:"<<str<<endl;
+		for(int i=0;i<str.size();i++){
+			char temp = str[str.size()-i];
+				cout<<temp<<"\n";
+				str[str.size()-i] = str[i];
+				str[i] = temp;
+		}		
+			cout<<"the sequence reversed is:"<<str<<endl;
 	}		
 	return 0;
 }
