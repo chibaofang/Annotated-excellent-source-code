@@ -1,6 +1,7 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
+
 int main()
 {
 	float ratio = 0.047;
