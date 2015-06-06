@@ -1,5 +1,4 @@
 /*copy a binary tree*/
-
 tree_pointer copy(tree_pointer original) {
   tree_pointer temp;
   if(original) {
@@ -14,4 +13,9 @@ tree_pointer copy(tree_pointer original) {
     return temp;
   }
   return NULL;
+}
+
+/*equal?*/
+int equal(tree_pointer first, tree_pointer second) {
+  return (!first && !second)||(first && second && (first->data == second->data) && equal(first->left_child, second_child) && (equal(first->right_child, second->right_child))) 
 }
