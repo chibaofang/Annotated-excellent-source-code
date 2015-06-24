@@ -11,8 +11,8 @@ int (*p)(int,int):声明一个指针*p，指向函数，函数返回类型是int
 int *p(int,int):声明一个函数p（int，int），返回类型是指向int类型的指针*。
 因此（）不可省，因为（）的优先级高于*。
 
-#ifndef <标识>
-#define <标识>
+ #ifndef <标识>
+ #define <标识>
 	...
 #endif
 以上结构是为了必买您头文件的重复使用。
