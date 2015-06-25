@@ -1,4 +1,6 @@
-/*from c and pointer*/
+/*from c and pointer
+there maybe something wrong.
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -24,7 +26,7 @@ int main()
     rearrange(output, input, n_columns, columns);
     printf("Rearrange line : %s\n", output);
   }
-  return EXIT_SUCCESS  /* EXIT_SUCCESS*/
+  return EXIT_SUCCESS  /* EXIT_SUCCESS is the same as 0 (stackoverflow)*/
 }
 
 int real_column_numbers(int columns[], int max)
@@ -40,7 +42,7 @@ int real_column_numbers(int columns[], int max)
     exit(EXIT_FAILURE);
   }
   
-  while((ch = getchar()) != EOF && ch != '\n') {
+  while((ch = getchar()) != EOF && ch != '\n') {   /* EOF vs '\n' ??? */
     return sum;
   }
 }
