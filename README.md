@@ -14,7 +14,7 @@ int *p(int,int):声明一个函数p（int，int），返回类型是指向int类
  #ifndef <标识>
  #define <标识>
 	...
-#endif
+ #endif
 ```
 以上结构是为了必买您头文件的重复使用。
 
