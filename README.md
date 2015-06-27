@@ -1,4 +1,4 @@
-learnc
+learn C/C++
 ======
 
 this is used for C/C++, including source code and details need paying attention to.
@@ -38,3 +38,26 @@ malloc()与free()的区别：
 	int *p;
 	p = new int;
 	```
+###C++中创建类时的一些注意事项
+####类声明：
+　　类函数必须先在类体中作原型声明，然后在类外定义，也就是*说类体的位置应在函数定义之前*，否则编译时会出错。
+####成员函数：
+　　类的成员函数（简称类函数）是函数的一种,属于一个类的成员.有的函数并不是准备为外界调用的，而是为本类中的成员函数所调用的，就应该将它们指定为private。这种函数的作用是支持其它函数的操作，是类中其它成员的工具函数(utility function)，类外用户不能调用这些私有的工具函数。
+　　关于inline成员函数，如果成员函数不在类体内定义，而在类体外定义，系统并不把它默认为内置(inline)函数，调用这些成员函数的过程和调用一般函数的过程是相同的。如果想将这些成员函数指定为内置函数，应当用inline作显式声明。如果在类体外定义inline函数，则必须将类定义和成员函数的定义都放在同一个头文件中(或者写在同一个源文件中)，否则编译时无法进行置换(将函数代码的拷贝嵌入到函数调用点)。
+```
+class Student
+{
+	public :
+		inline void display( );//声明此成员函数为内置函数
+	private :
+		int num;
+       		string name;
+       		char sex;
+};
+inline void Student::display( ) // 在类外定义display函数为内置函数
+{
+	cout<<"num:"<<num<<endl;
+	cout<<"name:"<<name<<endl;
+	cout<<"sex:"<<sex<<endl;
+}
+```
