@@ -1,7 +1,6 @@
 learn C/C++
 ======
-
-this is used for C/C++, including source code and details need paying attention to.
+学习优秀的源码，并标注一些需要注意的问题
 
 i++和++i间的区别：
 i++: a = i; i = i+1;
@@ -16,7 +15,7 @@ int *p(int,int):声明一个函数p（int，int），返回类型是指向int类
 	...
  #endif
 ```
-以上结构是为了必买您头文件的重复使用。
+以上结构是为了避免头文件的重复使用。
 
 extern用法：声明全局变量。
 
