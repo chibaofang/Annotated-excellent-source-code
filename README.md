@@ -77,3 +77,6 @@ with open("etc/passwd") as f:
 在 “with” 打开的代码块内，文件是打开的，而且可以自由读取。然而，一旦Python代码从 “with” 负责的代码段退出，文件会自动关闭。所以，通过使用 “with”，你避免了显式地关闭文件的操作。Python 会以一种不那么有 Python 风格的方式在幕后神奇而静静地替你关闭文件。<br>
 ####build up modules:
 To group many *.py files put them in a folder. Any folder with an __init__.py is considered a module by python and you can call them a package
+
+##Java
+
