@@ -61,7 +61,7 @@ inline void Student::display( ) // 在类外定义display函数为内置函数
 }
 ```
 ###Python
-遍历打开文件的方法：
+####遍历打开文件的方法：
 ```
 f = open('/etc/passwd')
 for line in f:
@@ -75,3 +75,5 @@ with open("etc/passwd") as f:
         print line
 ```
 在 “with” 打开的代码块内，文件是打开的，而且可以自由读取。然而，一旦Python代码从 “with” 负责的代码段退出，文件会自动关闭。所以，通过使用 “with”，你避免了显式地关闭文件的操作。Python 会以一种不那么有 Python 风格的方式在幕后神奇而静静地替你关闭文件。<br>
+####build up modules:
+To group many *.py files put them in a folder. Any folder with an __init__.py is considered a module by python and you can call them a package
