@@ -60,7 +60,7 @@ inline void Student::display( ) // 在类外定义display函数为内置函数
 	cout<<"sex:"<<sex<<endl;
 }
 ```
-###Python
+##Python
 ####遍历打开文件的方法：
 ```
 f = open('/etc/passwd')
