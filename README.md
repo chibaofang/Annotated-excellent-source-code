@@ -1,7 +1,7 @@
 学习优秀的源码，并标注一些需要注意的问题
 ======
 
-
+##C/C++
 i++和++i间的区别：
 i++: a = i; i = i+1;
 ++i: i = i+1; a =i; 
@@ -60,3 +60,18 @@ inline void Student::display( ) // 在类外定义display函数为内置函数
 	cout<<"sex:"<<sex<<endl;
 }
 ```
+###Python
+遍历打开文件的方法：
+```
+f = open('/etc/passwd')
+for line in f:
+    print(line)
+f.close()
+```
+然而有一种更好的打开文件的方法：
+```
+with open("etc/passwd") as f:
+    for line in f:
+        print line
+```
+在 “with” 打开的代码块内，文件是打开的，而且可以自由读取。然而，一旦Python代码从 “with” 负责的代码段退出，文件会自动关闭。所以，通过使用 “with”，你避免了显式地关闭文件的操作。Python 会以一种不那么有 Python 风格的方式在幕后神奇而静静地替你关闭文件。<br>
