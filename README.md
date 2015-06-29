@@ -78,5 +78,27 @@ with open("etc/passwd") as f:
 ####build up modules:
 To group many *.py files put them in a folder. Any folder with an __init__.py is considered a module by python and you can call them a package
 
+####关于NB.py
+首先是对原始的数据（.csv）进行格式转换:
+在进行[大数据竞赛](https://github.com/chibaofang/Pur_Red_forecast)的时候，对于csv格式文件的处理方式借用了Perl中的方法：
+```
+def load_csv(filename):
+    for line in filename:
+    	if True:
+    		line = line.split(',') #由此每一行被转化成一个list，而每个元素的属性为'str'
+    		...
+```
+而样例代码很值得学习,简洁、高效：
+```
+import csv
+def loadcsv(filename):
+    lines = csv.reader(open(filename, "rb"))
+    dataset = list(lines)
+    for i in range(len(dataset)):
+        dataset[i] = [float(x) for x in dataset[i]]
+    return dataset
+```
+
+对比起来显然不够好。
 ##Java
 
