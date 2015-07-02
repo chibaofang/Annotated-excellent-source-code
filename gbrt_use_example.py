@@ -8,7 +8,7 @@ def ground_truth(x):
     return x * np.sin(x) + np.sin(2 * x) #这是一个复合的正弦函数
 
 def gen_data(n_samples = 200):
-    np.random.seed(13) #生成种子是干嘛的？
+    np.random.seed(13) 
     x = np.random.uniform(0, 10, size = n_samples) 
     x.sort() #200个由小到大的0~10之间的随机数、服从均匀分布分布。x轴
     y = ground_truth(x) +0.75 * np.random.normal(size = n_samples)# y轴
