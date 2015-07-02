@@ -14,7 +14,7 @@ def gen_data(n_samples = 200):
     y = ground_truth(x) +0.75 * np.random.normal(size = n_samples)# y轴
 
     train_mask = np.random.randint(0,2,size = n_samples).astype(np.bool)
-    ###astype这句不懂？
+    ###astype在numpy中用于数据类型转换。但是这里用np.bool可能是有问题的？？？
 
 
     x_train, y_train = x[train_mask, np.newaxis],y[train_mask]
