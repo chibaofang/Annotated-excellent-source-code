@@ -60,6 +60,16 @@ inline void Student::display( ) // 在类外定义display函数为内置函数
 	cout<<"sex:"<<sex<<endl;
 }
 ```
+####c读取文件
+```
+#include<stdio.h>
+FILE *fp;
+if((fp = open("file1","r"))==NULL)
+{
+  printf("cannot open this file.\n");
+  exit(0); //close all the files
+}
+```
 ##Python
 ####遍历打开文件的方法：
 ```
