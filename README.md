@@ -116,5 +116,10 @@ def loadcsv(filename):
 >>>word[0:2]  # characters from position 0 (included) to 2 (excluded)
 ```
 Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults to the size of the string being sliced.
+#### transform all iterms in a list( str -> int)
+```
+>>>a = ['1','2','3']
+>>>a = [int(x) for x in a]
+```
 ##Java
 
